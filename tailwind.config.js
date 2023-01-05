@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       backgroundImage:{
         'signUp': "url('../pages/images/sideImg.png')"
+      },
+      color:{
+        text:"white"
       }
     },
   },

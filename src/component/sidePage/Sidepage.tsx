@@ -26,7 +26,7 @@ const SidbarSection = ({
         />
         <div className="flex h-screen justify-center items-center ">
           <div className="m-auto text-center">
-            <h3 className="text-2xl tracking-normal font-normal text-white">
+            <h3 className="text-4xl text-[text] tracking-normal font-normal text-white">
               {heading}
             </h3>
             <h1 className="text-4xl  leading-normal tracking-normal text-white font-bold">

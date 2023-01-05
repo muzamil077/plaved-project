@@ -11,7 +11,7 @@ const LoginScreen = () => {
   return (
     <>
       <div className="flex">
-        <div className="bg-signUp w-[50%] bg-[#0066af] lg:block md:hidden sm:hidden   h-screen">
+        <div className=" hidden bg-signUp w-[50%] bg-[#0066af] lg:block h-screen">
           <SidbarSection
             img={imag}
             heading="Helping Engineers to"
@@ -19,8 +19,8 @@ const LoginScreen = () => {
             headingtwo="Plaved help the teams and managers with all there constructions related inspections."
           />
         </div>
-        <div className=" flex  justify-center items-center  lg:w-2/4 md:w-full sm:w-full  bg-white-300">
-          <div className="m-auto mt-32">
+        <div className=" flex  justify-center items-center  w-screen lg:w-2/4 md:w-full sm:w-full  bg-white-300">
+          <div className="m-auto mt-24">
             <h1 className="text-center  text-3xl ">Welcome Back!</h1>
             <h3 className="items-start mt-10 leading-normal">
               New Here?{" "}
