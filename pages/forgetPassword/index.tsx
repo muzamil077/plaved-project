@@ -21,7 +21,7 @@ const ForgetPassword = () => {
         />
       </div>
 
-      <div className=" flex  justify-center items-center lg:mt-10 md:mt-24   lg:w-2/4 md: w-screen sm:w-full  bg-white-300">
+      <div className=" flex  justify-center items-center lg:mt-16 md:mt-24   lg:w-2/4 md: w-screen sm:w-full  bg-white-300">
         <div className="m-auto mt-24 ">
           <div className="pl-6 flex text-sm absolute top-2  left-2/4">
             <div className="mr-2 text-xl ">
@@ -43,13 +43,15 @@ const ForgetPassword = () => {
                 placeholder={"Enter Email Address"}
               />
               <div className="mt-8">
-                <Button
-                  onClick={() => alert("Button 1 is clicked !")}
-                  variant="info"
-                  size="xl"
-                >
-                  Login
-                </Button>
+                <Link href={"/forgetPassord"}>
+                  <Button
+                    onClick={() => alert("Button 1 is clicked !")}
+                    variant="info"
+                    size="xl"
+                  >
+                    Login
+                  </Button>
+                </Link>
               </div>
             </form>
           </div>

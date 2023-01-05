@@ -19,6 +19,10 @@ const LoginScreen = () => {
             headingtwo="Plaved help the teams and managers with all there constructions related inspections."
           />
         </div>
+          {/* <div className="flex absolute align-center    space-x-60 items-center  bottom-2 pl-10  left-2/4">
+            <h2 className="text-sm">Privecy Policy</h2>
+            <h2 className="text-sm">@ 2022 - Plaved Tech SL. All Rights Reserved.</h2>
+          </div> */}
         <div className=" flex  justify-center items-center  w-screen lg:w-2/4 md:w-full sm:w-full  bg-white-300">
           <div className="m-auto mt-24">
             <h1 className="text-center  text-3xl ">Welcome Back!</h1>
@@ -76,7 +80,7 @@ const LoginScreen = () => {
                 Login with Google
               </Button>
             </div>
-            {/* <div>dklgjihj</div> */}
+          
           </div>
         </div>
       </div>
