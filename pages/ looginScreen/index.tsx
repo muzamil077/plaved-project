@@ -1,27 +1,27 @@
 import Image from "next/image";
 import React from "react";
-import img from "../images/logo.png";
+import imag from "../images/logo.png";
 import FormInput from "../../src/component/Input";
 import Button from "../../src/component/Button";
+import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
-import Sidarsection from "../../src/component/sidebar";
+import SidbarSection from "../../src/component/sidePage/Sidepage";
 
 const LoginScreen = () => {
   return (
     <>
       <div className="flex">
-        <div className=" w-[50%] ">
-          <Sidarsection
-            img={img}
-            heading=" Helping Engineers to"
+        <div className="bg-signUp w-[50%] bg-[#0066af] lg:block md:hidden sm:hidden   h-screen">
+          <SidbarSection
+            img={imag}
+            heading="Helping Engineers to"
             headingone="Connect the teams"
-            headingtwo={`Plaved help the teams and managers with all there
-                constructions related inspections.`}
+            headingtwo="Plaved help the teams and managers with all there constructions related inspections."
           />
         </div>
         <div className=" flex  justify-center items-center  lg:w-2/4 md:w-full sm:w-full  bg-white-300">
-          <div className="m-auto mt-32 ">
-            <h1 className="text-center text-3xl ">Welcome Back!</h1>
+          <div className="m-auto mt-32">
+            <h1 className="text-center  text-3xl ">Welcome Back!</h1>
             <h3 className="items-start mt-10 leading-normal">
               New Here?{" "}
               <Link className="text-blue-500" href={""}>
@@ -44,10 +44,10 @@ const LoginScreen = () => {
             <div className="flex justify-between mt-5">
               <div>
                 <FormInput type="checkbox" />{" "}
-                <span className="ml-2">Remember Password</span>
+                <span className="ml-2 text-xs">Remember Password</span>
               </div>
               <div>
-                <Link className="text-blue-500" href={""}>
+                <Link className="text-blue-500 text-xs" href={"/forgetPassword"}> 
                   Forgot Password?
                 </Link>
               </div>
@@ -61,7 +61,22 @@ const LoginScreen = () => {
                 Login
               </Button>
             </div>
-            <div></div>
+            <div className="relative mt-3">
+              <div className="absolute  inset-0 flex items-center">
+                <div className="w-full border-t border-gray-400" />
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="bg-white px-2 text-gray-500">OR</span>
+              </div>
+            </div>
+            <div className="mt-4 border-2 border-blue-400">
+              {/* <span className="text-xl relative top-7"><FcGoogle/></span> */}
+              <Button variant="default" size="xl">
+                {" "}
+                Login with Google
+              </Button>
+            </div>
+            {/* <div>dklgjihj</div> */}
           </div>
         </div>
       </div>

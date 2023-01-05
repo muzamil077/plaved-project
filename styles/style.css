@@ -20,7 +20,7 @@
   
     .xl {
       @apply w-full;
-      @apply h-14
+      @apply h-10
     }
   
     /*button colors: default, primary, info, success, warning, danger, dark */
@@ -49,7 +49,7 @@
       @apply bg-blue-500 text-white;
     }
     .info:hover {
-      @apply bg-green-300 text-white;
+      @apply bg-green-400 text-white;
     }
   
     .warning {
