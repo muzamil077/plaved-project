@@ -43,13 +43,13 @@ const ForgetPassword = () => {
                 placeholder={"Enter Email Address"}
               />
               <div className="mt-8">
-                <Link href={"/forgetPassord"}>
+                <Link href={"/resatPasswordLink"}>
                   <Button
                     onClick={() => alert("Button 1 is clicked !")}
                     variant="info"
                     size="xl"
                   >
-                    Login
+                    Reset Password
                   </Button>
                 </Link>
               </div>
