@@ -5,13 +5,23 @@ import Button from "../src/component/Button";
 import FormInput from "../src/component/Input";
 import LoginScreen from "./ looginScreen";
 import ResatPasswordLink from "./resatPasswordLink";
+import ProgressBar from "../src/component/progressbar/ProgressBar";
 import ForgetPasswordEmail from "./forgetPassword-email";
+import RegistrationSidePage from "../src/component/RegistrationSidePage/RegistrationSidePage";
+import RagistrationUserOne from "./RagistrationUserOne";
+import BillingPage from "./Billing";
+import Sidebar from "../src/component/sidebar/sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-    <LoginScreen/>
+    {/* <BillingPage/> */}
+    {/* <Sidebar/> */}
+    {/* <RagistrationUserOne/> */}
+    {/* <ProgressBar/> */}  
+    {/* <RegistrationSidePage/> */}
+    {/* <LoginScreen/> */}
     </>
   );
 }

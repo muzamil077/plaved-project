@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/component/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -10,7 +10,14 @@ module.exports = {
         'signUp': "url('../pages/images/sideImg.png')"
       },
       color:{
-        text:"white"
+        text:"white",
+        
+      },
+      backgroundColor:{
+        "sideColor":"bg-red-500"
+      },
+      width:{
+        "width":"30%"
       }
     },
   },

@@ -19,7 +19,7 @@ const LoginScreen = () => {
             headingtwo="Plaved help the teams and managers with all there constructions related inspections."
           />
         </div>
-          {/* <div className="flex absolute align-center    space-x-60 items-center  bottom-2 pl-10  left-2/4">
+        {/* <div className="flex absolute align-center    space-x-60 items-center  bottom-2 pl-10  left-2/4">
             <h2 className="text-sm">Privecy Policy</h2>
             <h2 className="text-sm">@ 2022 - Plaved Tech SL. All Rights Reserved.</h2>
           </div> */}
@@ -51,19 +51,24 @@ const LoginScreen = () => {
                 <span className="ml-2 text-xs">Remember Password</span>
               </div>
               <div>
-                <Link className="text-blue-500 text-xs" href={"/forgetPassword"}> 
+                <Link
+                  className="text-blue-500 text-xs"
+                  href={"/forgetPassword"}
+                >
                   Forgot Password?
                 </Link>
               </div>
             </div>
             <div className="mt-8">
-              <Button
-                onClick={() => alert("Button 1 is clicked !")}
-                variant="info"
-                size="xl"
-              >
-                Login
-              </Button>
+              <Link href={"/layout"}>
+                <Button
+                  onClick={() => alert("Button 1 is clicked !")}
+                  variant="info"
+                  size="xl"
+                >
+                  Login
+                </Button>
+              </Link>
             </div>
             <div className="relative mt-3">
               <div className="absolute  inset-0 flex items-center">
@@ -73,14 +78,16 @@ const LoginScreen = () => {
                 <span className="bg-white px-2 text-gray-500">OR</span>
               </div>
             </div>
-            <div className="mt-4 border-2 border-blue-400">
+            <div className="mt-4 border-2 h-15 ml-3 border-blue-400">
               {/* <span className="text-xl relative top-7"><FcGoogle/></span> */}
-              <Button variant="default" size="xl">
-                {" "}
-                Login with Google
+              <Button
+                onClick={() => alert("Button 1 is clicked !")}
+                variant="disable"
+                size="xl"
+              >
+                Login
               </Button>
             </div>
-          
           </div>
         </div>
       </div>

@@ -47,7 +47,7 @@ const SidbarSection = ({
               <h1 className="text-3xl  leading-normal tracking-normal text-white font-bold">
                 {headingone}
               </h1>
-              <h4 className="text-white tracking-normal mx-40 bg-red-500 m-auto text-center">
+              <h4 className="text-white tracking-normal mx-40 m-auto text-center">
                 {headingtwo}
               </h4>
             </div>
