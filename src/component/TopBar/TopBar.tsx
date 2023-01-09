@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { GoPlus } from "react-icons/go";
 import { CiSearch } from "react-icons/ci";
 import Button from "../Button";
 import FormInput from "../Input";
+import { myContext } from "../../../pages/_app";
+
 
 const TopBar = () => {
-  const [open, setOpen] = useState(false);
+  const [state, setState] = useState(false);
+  const [click, setClick] = useState(false)
+  const {open, setOpen} = useContext(myContext)
+ 
   return (
-    <nav className="bg-white mt-6  w-5/6 relative float-right ">
+    <nav className= {`bg-white mt-2  ${open ? "w-5/6" : "w-11/12"} border-b-2  relative float-right`} >
       <div className="mx-auto abs   max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className=" flex h-16 items-center justify-center">
           <div className="absolute inset-y-0 left-0 flex items-center">
@@ -18,10 +23,10 @@ const TopBar = () => {
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <AiOutlineMenuFold />
+              <AiOutlineMenuFold  onClick={()=> setOpen(!open)} className={`${!open && "rotate-180"}`} />
             </button>
           </div>
-          <div className="flex flex-1  items-center  justify-between sm:items-stretch sm:justify-star">
+          <div className="flex flex-1  items-center  justify-between sm:items-stretch">
             <div className="flex flex-shrink-0    items-center">
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex w-10 items-center  space-x-4">
@@ -52,7 +57,7 @@ const TopBar = () => {
                 className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
                 <span className="sr-only">View notifications</span>
-
+          
                 <svg
                   className="h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +78,7 @@ const TopBar = () => {
               <div className="relative ml-3">
                 <div>
                   <button
-                    onClick={() => setOpen(!open)}
+                   onClick={()=> setState(!state)}
                     type="button"
                     className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     id="user-menu-button"
@@ -89,7 +94,7 @@ const TopBar = () => {
                   </button>
                 </div>
 
-                {open && (
+                {state && (
                   <div
                     className="absolute bg-blue-500  text-white right-0 z-10 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                     role="menu"
