@@ -6,11 +6,13 @@ import { AiOutlineSetting } from "react-icons/ai";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiDashboardFill } from "react-icons/ri";
 import { BsArrowLeft } from "react-icons/bs";
+import {TbReportSearch} from "react-icons/tb"
+import {MdOutlineDocumentScanner} from "react-icons/md"
 
 const SidebarData = [
   { title: "Home", icon: <AiOutlineHome /> },
-  { title: "Reports" },
-  { title: "Documents" },
+  { title: "Reports" ,icon: <TbReportSearch/> },
+  { title: "Documents", icon: <MdOutlineDocumentScanner/> },
 ];
 
 const Sidebar = () => {

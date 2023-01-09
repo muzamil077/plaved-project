@@ -15,7 +15,7 @@ const steps = [
 const RagistrationUserOne = () => {
   return (
     <div className="flex">
-      <div className="w-[60%]">
+      <div className="w-[40%]">
         <RegistrationSidePage
           imgOne={logo}
           heading={"Take control"}

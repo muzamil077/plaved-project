@@ -30,21 +30,21 @@ export default function BillingPage() {
     router.push("/register/summary");
   };
   return (
-    <div className="min-h-auto w-full grid lg:grid-cols-3 grid-rows-0 md:grid-cols-2">
+    <div className=" w-full ml-24 ">
       <div className="h-[80vh] mt-12 w-[100%] flex flex-col items-center justify-around col-span-2 ">
-        <div className="hidden overflow-hidden lg:block  flex">
+        <div className="hidden flex overflow-hidden lg:block ">
           <ProgressBar StepsProps={steps} />
         </div>
         <div className="space-y-3">
           <h3 className="text-[32px] font-medium font-600 text-black-500 text-center">
-            Información de facturación
+          Billing Information
           </h3>
           <p className="text-sm text-normal text-[#4F4F4F] leading-loose text-center">
-            Un último paso. Añade los detalles de facturación y de tu empresa.
+          One last step! Add your credit card and continue billing
           </p>
         </div>
         <div className="w-[60%]">
-          <form className="w-[100%]" onSubmit={submitForm}>
+          <form className="w-[40%]" onSubmit={submitForm}>
             <div className="flex flex-col justify-center">
               <div className="flex flex-col items-center">
                 <div className="w-[100%] xl:w-[60%] lg:w-[80%] md:w-[90%]">
@@ -52,7 +52,7 @@ export default function BillingPage() {
                     id="companyName"
                     type="text"
                     name="companyName"
-                    placeholder="Nombre de empresa/autónomo"
+                    placeholder="Card Holder Name"
                   />
                   <div className="mt-4 mb-4">
                     <FormInput

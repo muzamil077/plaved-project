@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenuFold } from "react-icons/ai";
+import { GoPlus } from "react-icons/go";
+import { CiSearch } from "react-icons/ci";
 import Button from "../Button";
 import FormInput from "../Input";
 
@@ -12,63 +14,33 @@ const TopBar = () => {
           <div className="absolute inset-y-0 left-0 flex items-center">
             <button
               type="button"
-              className="inline-flex text-xl text-black items-center justify-center rounded-md p-2  hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-2  "
+              className="inline-flex text-xl text-black items-center justify-center rounded-md p-2  hover:bg-gray-500 hover:text-white "
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <span className="sr-only">Open main menu</span>
-
-              <svg
-                className="block text-black text-3xl font-semibold h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-
-              <svg
-                className="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <AiOutlineMenuFold />
             </button>
           </div>
           <div className="flex flex-1  items-center  justify-between sm:items-stretch sm:justify-star">
             <div className="flex flex-shrink-0    items-center">
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex w-10 items-center  space-x-4">
-                  <div>
+                  <div className="flex items-center space-x-2">
+                    <CiSearch className="text-xl" />
                     <FormInput
                       className="focus:outline-none hover:border-b-2 border-blue-500"
                       type="input"
-                      placeholder={"Enter Email"}
+                      placeholder={"Search Session Name or Phone"}
                     />
                   </div>
-                  <div>
+                  <div className="space-x-7 flex items-center">
+                    <GoPlus className="absolute text-white text-xl top-5 left-96 pr-2" />
                     <Button
                       onClick={() => alert("Button 1 is clicked !")}
                       variant="info"
                       size="lg"
                     >
-                      ADD
+                      Add Inspection
                     </Button>
                   </div>
                 </div>
@@ -119,7 +91,7 @@ const TopBar = () => {
 
                 {open && (
                   <div
-                    className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    className="absolute bg-blue-500  text-white right-0 z-10 mt-2 w-48 origin-top-right rounded-md py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="user-menu-button"

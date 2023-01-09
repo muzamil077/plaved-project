@@ -22,22 +22,7 @@ const ProgressBar: FC<steps> = ({ StepsProps }) => {
             {step.status === "complete" ? (
               <>
                 <div
-                  className="absolute  flex items-center"
-                  
-                >
-                  <div className="h-screen w-full bg-gray-200" />
-                </div>
-                <button
-                  type="button"
-                  className="group relative w-10 h-10 flex items-center justify-center bg-red-300 border-2 border-gray-100 rounded-full font-sans font-normal text-sm"
-                >
-                  {step.id}
-                  </button>
-              </>
-            ) : (
-              <>
-                <div
-                  className="absolute inset-0 flex items-center"
+                  className="absolute inset-1 flex items-center"
                   aria-hidden="true"
                 >
                   <div className="h-[0.5px] w-full bg-gray-200" />
@@ -45,6 +30,18 @@ const ProgressBar: FC<steps> = ({ StepsProps }) => {
                 <button
                   type="button"
                   className="group relative w-10 h-10 flex items-center justify-center bg-red-300 border-2 border-gray-100 rounded-full font-sans font-normal text-sm"
+                >
+                  {step.id}
+                </button>
+              </>
+            ) : (
+              <>
+                <div className="absolute  flex items-center">
+                  <div className="h-screen w-full bg-gray-200" />
+                </div>
+                <button
+                  type="button"
+                  className="group relative w-10 h-10 flex items-center justify-center bg-blue-500 border-2 border-gray-100 rounded-full font-sans font-normal text-sm"
                 >
                   {step.id}
                 </button>
