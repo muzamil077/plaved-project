@@ -11,17 +11,17 @@ import RegistrationSidePage from "../src/component/RegistrationSidePage/Registra
 import RagistrationUserOne from "./RagistrationUserOne";
 import BillingPage from "./Billing";
 import Sidebar from "../src/component/sidebar/sidebar";
+import Layout from "../src/component/Layout/Layout";
+import HomePage from "./Home";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-    {/* <BillingPage/> */}
-    {/* <Sidebar/> */}
-    {/* <RagistrationUserOne/> */}
-    {/* <ProgressBar/> */}  
-    {/* <RegistrationSidePage/> */}
-    {/* <LoginScreen/> */}
+      {/* <LoginScreen/> */}
+      {/* <HomePage/> */}
+
+      {/* <BillingPage/> */}
     </>
   );
 }

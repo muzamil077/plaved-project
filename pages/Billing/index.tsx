@@ -1,4 +1,3 @@
-
 import React from "react";
 import Link from "next/link";
 import { SiVisa } from "react-icons/si";
@@ -26,25 +25,25 @@ export default function BillingPage() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const inputObject = Object.fromEntries(formData); // convert the FormData object to a JSON object
-   
+
     router.push("/register/summary");
   };
   return (
-    <div className=" w-full ml-24 ">
+    <div className=" w-full">
       <div className="h-[80vh] mt-12 w-[100%] flex flex-col items-center justify-around col-span-2 ">
         <div className="hidden flex overflow-hidden lg:block ">
           <ProgressBar StepsProps={steps} />
         </div>
         <div className="space-y-3">
           <h3 className="text-[32px] font-medium font-600 text-black-500 text-center">
-          Billing Information
+            Billing Information
           </h3>
           <p className="text-sm text-normal text-[#4F4F4F] leading-loose text-center">
-          One last step! Add your credit card and continue billing
+            One last step! Add your credit card and continue billing
           </p>
         </div>
-        <div className="w-[60%]">
-          <form className="w-[40%]" onSubmit={submitForm}>
+        <div className="w-[40%]">
+          <form className="w-[100%]" onSubmit={submitForm}>
             <div className="flex flex-col justify-center">
               <div className="flex flex-col items-center">
                 <div className="w-[100%] xl:w-[60%] lg:w-[80%] md:w-[90%]">
@@ -111,13 +110,11 @@ export default function BillingPage() {
               </div>
               <div className="flex justify-between w-[100%] xl:w-[60%] lg:w-[80%] md:w-[90%] m-auto">
                 <Link href={"/register/pricing"}>
-                  <Button
-                  >
+                  <Button size="md" variant="info">
                     Back
                   </Button>
                 </Link>
-                <Button
-                >
+                <Button size="md" variant="info">
                   Next
                 </Button>
               </div>
@@ -127,4 +124,4 @@ export default function BillingPage() {
       </div>
     </div>
   );
-};
+}

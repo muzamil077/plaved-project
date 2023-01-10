@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <myContext.Provider value={{open, setOpen}}>
       <Layout>
-        <Component {...pageProps} />
+        <Component {...pageProps}  />
       </Layout>
     </myContext.Provider>
   );

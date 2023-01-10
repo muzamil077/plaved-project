@@ -13,17 +13,17 @@ const TopBar = () => {
   const {open, setOpen} = useContext(myContext)
  
   return (
-    <nav className= {`bg-white mt-2  ${open ? "w-5/6" : "w-11/12"} border-b-2  relative float-right`} >
+    <nav className= {`bg-white mt-2 duration-300  ${open ? "w-5/6" : "w-11/12"} border-b-2  relative float-right`} >
       <div className="mx-auto abs   max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className=" flex h-16 items-center justify-center">
-          <div className="absolute inset-y-0 left-0 flex items-center">
+        <div className=" flex h-16 items-center ">
+          <div className="absolute inset-y-0 left-0 flex items-center justify-center">
             <button
               type="button"
               className="inline-flex text-xl text-black items-center justify-center rounded-md p-2  hover:bg-gray-500 hover:text-white "
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <AiOutlineMenuFold  onClick={()=> setOpen(!open)} className={`${!open && "rotate-180"}`} />
+              <AiOutlineMenuFold  onClick={()=> setOpen(!open)} className={`${!open && "rotate-180"}  z-40`} />
             </button>
           </div>
           <div className="flex flex-1  items-center  justify-between sm:items-stretch">
@@ -103,7 +103,7 @@ const TopBar = () => {
                   >
                     <a
                       href="#"
-                      className="block px-4 py-2 text-sm text-gray-700"
+                      className="block px-4 py-2 hover:bg-gray-400 rounded-lg text-sm"
                       role="menuitem"
                       id="user-menu-item-0"
                     >
@@ -111,7 +111,7 @@ const TopBar = () => {
                     </a>
                     <a
                       href="#"
-                      className="block px-4 py-2 text-sm text-gray-700"
+                      className="block px-4 py-2 text-sm hover:bg-gray-400 rounded-lg"
                       role="menuitem"
                       id="user-menu-item-1"
                     >
@@ -119,7 +119,7 @@ const TopBar = () => {
                     </a>
                     <a
                       href="#"
-                      className="block px-4 py-2 text-sm text-gray-700"
+                      className="block px-4 py-2 text-sm  hover:bg-gray-400 rounded-lg"
                       role="menuitem"
                       id="user-menu-item-2"
                     >
