@@ -80,13 +80,15 @@ const LoginScreen = () => {
             </div>
             <div className="mt-4 border-2 h-15 ml-3 border-blue-400">
               {/* <span className="text-xl relative top-7"><FcGoogle/></span> */}
-              <Button
-                onClick={() => alert("Button 1 is clicked !")}
-                variant="disable"
-                size="xl"
-              >
-                Login
-              </Button>
+              <Link href={""}>
+                <Button
+                  onClick={() => alert("Button 1 is clicked !")}
+                  variant="disable"
+                  size="xl"
+                >
+                  Login
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

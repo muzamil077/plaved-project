@@ -25,26 +25,28 @@ const MyLineChart = () => {
   ]);
   return (
     <>
-    <h2 className="font-semibold">Analytics</h2>
-      <LineChart
-        width={600}
-        height={300}
-        data={data}
-        margin={{ top: 10, right: 30, left: 20, bottom: 5 }}
-      >
-        <XAxis dataKey="name" />
-        <YAxis />
-        <CartesianGrid strokeDasharray="3 3" />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="open"
-          stroke="#8884D8"
-          activeDot={{ r: 8 }}
-        />
-        <Line type="monotone" dataKey="Close" stroke="#82CA9D" />
-      </LineChart>
+      <h2 className="font-semibold">Analytics</h2>
+      <div className="w-[50%]">
+        <LineChart
+          width={600}
+          height={200}
+          data={data}
+          margin={{ top: 10, right: 30, left: 20, bottom: 5 }}
+        >
+          <XAxis dataKey="name" />
+          <YAxis />
+          <CartesianGrid strokeDasharray="3 3" />
+          <Tooltip />
+          <Legend />
+          <Line
+            type="monotone"
+            dataKey="open"
+            stroke="#8884D8"
+            activeDot={{ r: 8 }}
+          />
+          <Line type="monotone" dataKey="Close" stroke="#82CA9D" />
+        </LineChart>
+      </div>
     </>
   );
 };
