@@ -28,7 +28,7 @@ const Sidebar = () => {
         <div
           className={`${
             open ? "w-[218px]" : "w-20"
-          } p-5 duration-300 pt-8 h-screen rounded-xl relative bg-blue-500`}
+          } p-5 duration-300 pt-8 h-screen  relative bg-blue-500`}
         >
           <div className="flex  items-center space-x-4">
             <div>

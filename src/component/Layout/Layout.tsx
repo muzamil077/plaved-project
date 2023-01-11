@@ -8,9 +8,9 @@ const Layout: FC<IProps> = ({ children }) => {
   return (
     <>
       <TopBar />
-      <div className="flex">
+      <div className="flex w-full ">
         <Sidebar />
-        <main className="mt-20 p-6">{children}</main>
+        <main className=" w-full p-6">{children}</main>
       </div>
     </>
   );

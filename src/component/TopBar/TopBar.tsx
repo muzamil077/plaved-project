@@ -7,13 +7,13 @@ import FormInput from "../Input";
 import { myContext } from "../../../pages/_app";
 
 
-const TopBar = () => {
+const TopBar = () => {  
   const [state, setState] = useState(false);
   const [click, setClick] = useState(false)
   const {open, setOpen} = useContext(myContext)
- 
+  // ${open ? "w-5/6" : "w-11/12"}
   return (
-    <nav className= {`bg-white mt-2 duration-300  ${open ? "w-5/6" : "w-11/12"} border-b-2  relative float-right`} >
+    <nav className= {`bg-white mt-2 duration-300 w-full  border-b-2  relative float-right`} >
       <div className="mx-auto abs   max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className=" flex h-16 items-center ">
           <div className="absolute inset-y-0 left-0 flex items-center justify-center">
