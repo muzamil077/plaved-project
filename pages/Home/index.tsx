@@ -5,8 +5,8 @@ import InspectionTime from "../../src/component/inspectionTime/inspectionTime";
 const HomePage = () => {
   return (
     <div className=" ">
-      <div>
-        <h2 className="font-semibold text-2xl">Goodmorning, Carles</h2>
+      <div className="flex items-center justify-between">
+        <h2 className="font-semibold text-2xl">Goodmorning, Muzamil hussain</h2>
       </div>
       <div className="flex justify-between  space-x-4">
         <div className="mt-1 w-[70%]  ">

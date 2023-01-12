@@ -6,7 +6,7 @@ const InspectionTime = () => {
   return (
     <>
       <div className="w-[400px] h-[150px] rounded-lg bg-slate-400">
-        <h2>Inspection Time component is here</h2>
+        <h2 className="p-4">Inspection Time component is here</h2>
       </div>
       <div>
         <ShowInspection/>
