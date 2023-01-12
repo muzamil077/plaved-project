@@ -11,7 +11,8 @@
     }
   
     .md {
-      @apply px-4;
+      @apply h-9;
+
     }
   
     .lg {
@@ -21,7 +22,7 @@
   
     .xl {
       @apply w-full;
-      @apply h-10
+      @apply h-9
     }
   
     /*button colors: default, primary, info, success, warning, danger, dark */

@@ -78,7 +78,7 @@ const LoginScreen = () => {
                 <span className="bg-white px-2 text-gray-500">OR</span>
               </div>
             </div>
-            <div className="mt-4 border-2 h-15 ml-3 border-blue-400">
+            <div className="mt-4 border-1 h-15 ml-3 border-blue-400">
               {/* <span className="text-xl relative top-7"><FcGoogle/></span> */}
               <Link href={""}>
                 <Button
