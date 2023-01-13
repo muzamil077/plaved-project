@@ -6,12 +6,15 @@ import Button from "../Button";
 import FormInput from "../Input";
 import { myContext } from "../../../pages/_app";
 import Image from "next/image";
+import SlideOver from "../slideOver/slideOver";
 import me from "../../../pages/images/me.jpeg"
+// import { myContext } from "../../../pages/_app";
 
 const TopBar = () => {  
   const [state, setState] = useState(false);
   const [click, setClick] = useState(false)
   const {open, setOpen} = useContext(myContext)
+  const {slide, setSlide} = useContext(myContext)
   // ${open ? "w-5/6" : "w-11/12"}
   return (
     <nav className= {`bg-white mt-2 duration-300 w-full  border-b-2  relative float-right`} >
@@ -42,7 +45,7 @@ const TopBar = () => {
                   <div className="space-x-7 flex items-center">
                     <GoPlus className="absolute text-white text-xl top-5 left-96 pr-2" />
                     <Button
-                      onClick={() => alert("Button 1 is clicked !")}
+                      onClick={() => setSlide(!slide)}
                       variant="info"
                       size="lg"
                     >
@@ -162,6 +165,7 @@ const TopBar = () => {
           </div>
         </div>
       </div>
+      <SlideOver/>
     </nav>
   );
 };

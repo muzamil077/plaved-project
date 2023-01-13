@@ -9,9 +9,10 @@ export const myContext = createContext({} as any);
 export default function App({ Component, pageProps }: AppProps) {
   const [open, setOpen] = useState();
   const [enabled, setEnabled] = useState(false)
+  const [slide, setSlide] = useState(false)
  
   return (
-    <myContext.Provider value={{open, setOpen , enabled, setEnabled}}>
+    <myContext.Provider value={{open, setOpen , enabled, setEnabled, slide, setSlide}}>
       <Layout>
         <Component {...pageProps}  />
       </Layout>
