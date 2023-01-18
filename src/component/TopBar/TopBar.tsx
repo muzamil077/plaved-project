@@ -20,7 +20,7 @@ const TopBar = () => {
     <nav className= {`bg-white mt-2 duration-300 w-full  border-b-2  relative float-right`} >
       <div className="mx-auto abs   max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className=" flex h-16 items-center ">
-          <div className="absolute inset-y-0 left-0 flex items-center justify-center">
+          <div className="absolute inset-y-0 left-5 flex items-center justify-center">
             <button
               type="button"
               className="inline-flex text-xl text-black items-center justify-center rounded-md p-2  hover:bg-gray-500 hover:text-white "

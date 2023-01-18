@@ -3,12 +3,16 @@ import { Dialog, Transition } from "@headlessui/react";
 import { AiOutlineClose } from "react-icons/ai";
 import FormInput from "../Input";
 import { myContext } from "../../../pages/_app";
+import { RiMessage2Line } from "react-icons/ri";
+import Toggal from "../toggel/toggel";
+import Button from "../Button";
 
 const SlideOver = () => {
   const { slide, setSlide } = useContext(myContext);
-
+  const { toggal, setToggal } = useContext(myContext);
+  const newToggal = true;
   return (
-    <Transition.Root show={slide} as={Fragment}>
+    <Transition.Root show={slide}>
       <Dialog as="div" className="relative z-10" onClose={setSlide}>
         <Transition.Child
           as={Fragment}
@@ -60,59 +64,62 @@ const SlideOver = () => {
                         Session Information
                       </Dialog.Title>
                     </div>
-                    <div className="relative mt-6 flex-1 px-4 sm:px-6">
+                    <div className="mt-6 flex-1 px-4 sm:px-6">
                       {/* Replace with your content */}
-                      <FormInput
-                      className="focus:outline-none hover:border-b-2 border-blue-500"
-                      type="input"
-                      placeholder={"Search Session Name or Phone"}
-                    />
-                      <form >
+                      <form>
                         <FormInput
                           type="input"
-                          className="focus:outline-none hover:border-2 border-blue-500 p-2 bg-blue-500 rounded-lg  w-full leading-normal tracking-normal  "
+                          className="focus:outline-none hover:border-b-2 border-blue-500 cursor-pointer p-2 rounded-lg  w-full leading-normal tracking-normal  "
                           placeholder="Session Name"
                         />
                         <FormInput
-                          className="focus:outline-none hover:border-b-2 border-blue-500"
-                          type="input"
-                          placeholder={"Search Session Name or Phone"}
+                          type="text"
+                          placeholder="Session Description"
+                          className="p-2 h-24"
                         />
-                        <FormInput type="message" />
                       </form>
-                      Add your Inspection here please.... Add your Inspection
-                      here please.... Add your Inspection here please.... Add
-                      your Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please.... Add your Inspection here
-                      please.... Add your Inspection here please.... Add your
-                      Inspection here please....
+                      <div className="mt-1 w-full  ">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103408.16812938025!2d74.30191431989662!3d35.91013101395395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e649e3642543b1%3A0x40fd0ca3ca17282b!2sGilgit!5e0!3m2!1sen!2s!4v1663738425529!5m2!1sen!2s"
+                          className="w-full h-[200px]"
+                        ></iframe>
+                      </div>
                       <div className="absolute inset-0 px-4 sm:px-6">
                         <div className="h-full" aria-hidden="true" />
                       </div>
                       {/* /End replace */}
+                      <div className="flex items-center  space-x-6">
+                        <div className="flex items-center mt-8 space-x-4">
+                          <div onClick={() => setToggal(!toggal)}>
+                            <Toggal />
+                          </div>
+                          {toggal === newToggal ? (
+                            <h2 className="text-sm">
+                              Inspection is open to user
+                            </h2>
+                          ) : (
+                            <h2 className="text-sm">
+                              Inspection is close to user
+                            </h2>
+                          )}
+                        </div>
+                        <div className="flex items-center space-x-2 mt-7 text-blue-500">
+                          <RiMessage2Line className="text-md mt-1" />
+                          <h2 className="text-sm">Send SMS Invite</h2>
+                        </div>
+                      </div>
+                      <div className="justify-center w-40 text-sm flex items-center">
+                        <div>
+                          <Button variant="success" size="md">
+                            Session
+                          </Button>
+                        </div>
+                        <div>
+                          <Button variant="success" size="md">
+                            Changes
+                          </Button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Dialog.Panel>

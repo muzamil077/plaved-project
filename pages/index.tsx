@@ -12,13 +12,13 @@ import RagistrationUserOne from "./RagistrationUserOne";
 import BillingPage from "./Billing";
 import Sidebar from "../src/component/sidebar/sidebar";
 import Layout from "../src/component/Layout/Layout";
-import HomePage from "./Home";
+import HomePage from "./";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <LoginScreen/>
+      {/* <LoginScreen/> */}
       {/* <HomePage/> */}
       {/* <BillingPage/> */}
     </>
